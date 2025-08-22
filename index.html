@@ -12,9 +12,9 @@
 <body>
     <div class="container">
         <div class="clock">
-            <div class="cercle hrs1" style="--bgc:rgb(33, 246, 33);"><i></i></div>
-            <div class="cercle min1" style="--bgc:rgb(230, 230, 49);"><i></i></div>
-            <div class="cercle sec1" style="--bgc:rgb(246, 26, 26); "><i></i></div>
+            <div class="cercle hrs1" style="--bgc:rgb(3, 246, 3);"><i></i></div>
+            <div class="cercle min1" style="--bgc:rgb(244, 244, 9);"><i></i></div>
+            <div class="cercle sec1" style="--bgc:rgb(248, 5, 5); "><i></i></div>
             <div class="cercle hrs"></div>
             <div class="cercle min"></div>
             <div class="cercle sec"></div>
@@ -36,9 +36,9 @@
         <!-- digital -->
 
         <div class="montre">
-            <div id="dh"></div>:
-            <div id="dm"></div>:
-            <div id="ds"></div>:
+            <div id="dh" style="--bgc:rgb(3, 246, 3);"></div>
+            <div id="dm" style="--bgc:rgb(244, 244, 9);"></div>
+            <div id="ds" style="--bgc:rgb(248, 5, 5); "></div>
             <div id="ma-sw"></div>
         </div>
     </div>
@@ -52,8 +52,8 @@
             const datee=new Date();
             const jour=datee.getDay()
 
-            document.getElementById('dh').innerText=String(datee.getHours()).padStart(2,0);
-            document.getElementById('dm').innerText=String(datee.getMinutes()).padStart(2,0);
+            document.getElementById('dh').innerText=String(datee.getHours()).padStart(2,0)+" :";
+            document.getElementById('dm').innerText=String(datee.getMinutes()).padStart(2,0)+" :";
             document.getElementById('ds').innerText=String(datee.getSeconds()).padStart(2,0);
             document.getElementById('ma-sw').innerText=jours[jour];
        },10)
